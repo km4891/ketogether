@@ -24,7 +24,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
-  // orders: [Order.schema]
+  recipes:  [{
+    type: Schema.Types.ObjectId,
+    ref: 'Recipe',
+    required: true,
+  }]
 });
 
 // set up pre-save middleware to create password

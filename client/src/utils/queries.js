@@ -16,20 +16,20 @@ export const QUERY_RECIPES = gql`
   }
 `;
 
-export const QUERY_ALL_RECIPES = gql`
-  {
-    recipes(category: $category) {
-      _id
-      name
-      ingredients
-      instructions
-      image
-      category {
-        _id
-      }
-      like
-    }
-`;
+// export const QUERY_ALL_RECIPES = gql`
+//   {
+//     recipes(category: $category) {
+//       _id
+//       name
+//       ingredients
+//       instructions
+//       image
+//       category {
+//         _id
+//       }
+//       like
+//     }
+// `;
 
 export const QUERY_CATEGORIES = gql`
 {
