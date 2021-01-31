@@ -19,7 +19,7 @@ db.once('open', async () => {
   const recipes = await Recipe.insertMany([
     {
       name: 'Chicken Spinach',
-      ingredient: [],
+      ingredients: [],
       instructions:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'stuffed-chicken-breasts.jpg',
