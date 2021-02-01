@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const QUERY_RECIPES = gql`
-  query getProducts($category: ID) {
+  query getRecipe($category: ID) {
     recipes(category: $category) {
       _id
       name
@@ -16,20 +16,20 @@ export const QUERY_RECIPES = gql`
   }
 `;
 
-// export const QUERY_ALL_RECIPES = gql`
-//   {
-//     recipes(category: $category) {
-//       _id
-//       name
-//       ingredients
-//       instructions
-//       image
-//       category {
-//         _id
-//       }
-//       like
-//     }
-// `;
+export const QUERY_ALL_RECIPES = gql`
+  {
+    recipes(category: $category) {
+      _id
+      name
+      ingredients
+      instructions
+      image
+      category {
+        _id
+      }
+      like
+    }
+`;
 
 export const QUERY_CATEGORIES = gql`
 {
