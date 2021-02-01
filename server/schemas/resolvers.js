@@ -69,9 +69,10 @@ const resolvers = {
             name, ingredients, instructions, image, category, like
            }) 
   
-        const user =   await User.findByIdAndUpdate(context.user._id, { $push: { recipes: recipe._id } });
-        console.log(user)
-          return user;
+        // const recipe = await Recipe.findByIdAndUpdate(context.user._id, { $push: { recipes: recipe._id } });
+        console.log(recipe)
+          // return {...recipe._doc};
+          return {...thing._doc};
         }
   
         throw new AuthenticationError('Not logged in');
