@@ -61,6 +61,23 @@ const resolvers = {
         throw new AuthenticationError('Not logged in');
       },
 
+      addRecipe: async (parent, { name, ingredients, instructions, image, category, like }, context) => {
+        console.log(context, name);
+        if (context.user) {
+         
+          const recipe = await Recipe.create({
+            name, ingredients, instructions, image, category, like
+           }) 
+  
+        // const recipe = await Recipe.findByIdAndUpdate(context.user._id, { $push: { recipes: recipe._id } });
+        console.log(recipe)
+          // return {...recipe._doc};
+          return {...thing._doc};
+        }
+  
+        throw new AuthenticationError('Not logged in');
+      },
+
       updateRecipe: async (parent, { _id }) => {
         // const decrement = Math.abs(quantity) * -1;
   

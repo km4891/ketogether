@@ -14,17 +14,17 @@ db.once('open', async () => {
 
   console.log('categories seeded');
 
-  await Recipes.deleteMany();
+  await Recipe.deleteMany();
 
   const recipes = await Recipe.insertMany([
     {
       name: 'Chicken Spinach',
-      ingredient: [],
+      ingredients: [],
       instructions:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
       image: 'stuffed-chicken-breasts.jpg',
       category: categories[2]._id,
-      like: []
+      like: 1
     }
   ]);
 

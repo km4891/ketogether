@@ -8,7 +8,7 @@ const recipeSchema = new Schema({
     required: true,
     trim: true
   },
-  ingredient: {
+  ingredients: {
     type: String
   },
   instructions: {
@@ -23,7 +23,7 @@ const recipeSchema = new Schema({
     required: true,
   },
   like: {
-      type: []
+      type: Number
   }
 });
 
