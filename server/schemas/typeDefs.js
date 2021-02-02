@@ -22,7 +22,8 @@ const typeDefs = gql`
     lastName: String
     email: String
     recipes: [Recipe]
-
+  }
+  
   type Auth {
     token: ID
     user: User
