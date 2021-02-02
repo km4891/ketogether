@@ -1,3 +1,66 @@
-/* Log in start for testing log in*/
+main {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 50px 30px;
+}
 
-/* log in end */
+:root {
+    --primary: #C3E6E0;
+    --secondary: #01C6B2;
+    --tertiary: #96D701;
+    --light: #fafafa;
+    --dark: #000000;
+    --darker: #111111;
+    --spacing-one: calc(1rem * 0.5);
+    --spacing-two: calc(1rem);
+    --spacing-five: calc(2.5rem);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    background: var(--primary);
+    color: var(--dark);
+    font-family:'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 0;
+}

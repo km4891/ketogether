@@ -1,7 +1,8 @@
 import {
     UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY,
-
+    UPDATE_RECIPES,
+    ADD_RECIPE
 } from "./actions";
 
 const initialState = {
@@ -23,6 +24,19 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 currentCategory: action.currentCategory
             }
+
+        case UPDATE_RECIPES:
+            return {
+                ...state,
+                recipes: [...action.recipes],
+            };
+
+        case ADD_RECIPES:
+            return {
+                ...state,
+                recipes: [...action.recipes],
+            };
+
         default:
             return state;
     }

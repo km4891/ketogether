@@ -21,3 +21,14 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_RECIPE = gql`
+  mutation addRecipe($name: String!, $ingredients: String!, $instructions: String!, $image: String!, $category: ID!, $like: Int!){
+    addRecipe(name: $name, ingredients: $ingredients, instructions: $instructions, image: $image, category: $category, like: $like){
+      token
+      recipe{
+        _id
+      }
+    }
+  }
+`;
