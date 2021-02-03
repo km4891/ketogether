@@ -64,3 +64,9 @@ p {
     font-size: 1.1rem;
     margin-top: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
