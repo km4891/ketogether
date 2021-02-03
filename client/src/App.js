@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import Header from './components/Header';
-import Dashboard from './components/Dashboard';
+import Dashboard from './pages/Dashboard';
 import Donate from './components/Donate';
 import MakePost from './components/MakePost';
 import SavedRecipes from './components/SavedRecipes';
-import Login from './components/Login';
-import Logout from './components/Logout';
-import CreateAccount from './components/CreateAccount';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Home from './pages/Home';
+import Nav from './components/Nav';
 
 function App() {
     const [currentPage, handlePageChange] = useState('Dashboard');
@@ -24,18 +24,16 @@ function App() {
                 return <SavedRecipes />;
             case 'Login':
                 return <Login />;
-            case 'Logout':
-                return <Logout />;
-            case 'Create Account':
-                return <CreateAccount />;
+            case 'Signup':
+                return <Signup />;
             default: 
-                return <Dashboard />
+                return <Home />
         }
     };
 
     return (
         <div>
-            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+            <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
             <div> {renderPage(currentPage)} </div>
         </div>
     );

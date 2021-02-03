@@ -64,3 +64,138 @@ p {
     font-size: 1.1rem;
     margin-top: 0;
 }
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary);
+}
+
+.title {
+
+}
+/* Header Styling End */
+
+
+/* Footer Styling */
+footer {
+    height: 10vh;
+    background: var(--secondary);
+    padding-left: 40vw;
+    font-size: 3vw;
+}
+/* Footer Styling End */
+
+
+/* Button Styling */
+.btn-no-style {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+}
+
+.btn-no-style:focus {
+    outline: none;
+}
+
+.nav-btn {
+    margin: 6px;
+    margin-right: 3vh;
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: var(--primary);
+    transition: .5s;
+    text-decoration: none;
+}
+
+.nav-btn:active {
+    background-color: var(--tertiary);
+    transition: .3s;
+}
+
+.signup-btn,
+.login-btn {
+    background-color: var(--tertiary);
+    border: 0;
+    padding: 1%;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 20px;
+    transition: color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 0 40px 100px;
+}
+
+.login-btn {
+    font-size: 25px;
+    padding: 3%;
+    width: auto;
+    margin: 0 0 30px 36%;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+    background-color: var(--dark);
+    color: var(--tertiary);
+    transition: .3s;
+}
+
+.create-recipe-btn {
+    font-size: 4vw;
+    width: 49%;
+    margin: auto auto 15px auto;
+}
+
+.submit-btn {
+    width: fit-content;
+    height: 30px;
+}
+/* Button Styling End */
+
+
+/* Login & Signup Styling */
+.ls-title {
+
+}
+
+.login-signup {
+    background-color: var(--secondary);
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid var(--dark);
+    color: var(--dark);
+    font-size: 4vw;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.login-signup:focus {
+    outline: none;
+    border: 1px solid var(--tertiary);
+}
+/* Login & Signup Styling End */
+
+
+/* Dashboard Styling */
+.recipes {
+    display: inline-block;
+    margin-left: 90px;
+    height: 400px;
+    color: var(--dark);
+    background-color: var(--primary);
+    border: 5px inset var(--secondary);
+    border-radius: 15px;
+    width: 45vw;
+}
+/* Dashboard Styling End */

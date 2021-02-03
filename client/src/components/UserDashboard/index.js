@@ -45,7 +45,7 @@ function RecipeList() {
 
   return (
     <div className="my-2">
-      <h2>Recipes</h2>
+      <h2 className="recipes">Recipes</h2>
       {state.recipes.length ? (
         <div className="flex-row">
             {filterRecipes().map(recipe => (

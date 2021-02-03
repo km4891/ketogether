@@ -3,8 +3,8 @@ import React from 'react';
 class Footer extends React.Component {
     render() {
         return (
-            <footer className="">   
-                <div className="">&copy; 2021 </div>
+            <footer>   
+                <div> &copy; 2021 </div>
             </footer>
         )
     };
