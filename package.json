@@ -16,7 +16,8 @@
   "dependencies": {
     "if-env": "^1.0.4",
     "react-redux": "^7.2.2",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "stripe": "^8.133.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
