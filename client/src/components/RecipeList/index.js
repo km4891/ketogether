@@ -5,6 +5,7 @@ import { QUERY_RECIPES } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
 import { useSelector, useDispatch } from "react-redux";
+import Recipe from "../Recipe"
 
 
 function RecipeList() {
@@ -20,13 +21,13 @@ function RecipeList() {
     if(data) {
       dispatch({
            type: UPDATE_RECIPES,
-           recipes: data.products
+           recipes: data.recipes
         });
         data.recipes.forEach((recipe) => {
           idbPromise('recipes', 'put', recipe);
         });
     } else if (!loading) {
-      idbPromise('products', 'get').then((recipes) => {
+      idbPromise('recipes', 'get').then((recipes) => {
         dispatch({
           type: UPDATE_RECIPES,
           recipes: recipes
@@ -52,6 +53,7 @@ function RecipeList() {
                 <Recipe
                   key= {recipe._id}
                   _id={recipe._id}
+                  category={recipe.category}
                   image={recipe.image}
                   name={recipe.name}
                   ingredients={recipe.ingredients}

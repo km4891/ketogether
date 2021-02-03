@@ -2,7 +2,7 @@ import {
     UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY,
     UPDATE_RECIPES,
-    ADD_RECIPE
+    ADD_RECIPES
 } from "./actions";
 
 const initialState = {
