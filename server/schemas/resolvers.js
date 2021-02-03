@@ -10,7 +10,7 @@ const resolvers = {
       return await Category.find();
     },
     // Recipes
-    recipes: async (parent, { category, name }) => {
+    recipes: async (parent, { category, name }, context) => {
       const params = {};
 
       if (category) {
@@ -23,7 +23,7 @@ const resolvers = {
         };
       }
 
-      return await Product.find(params).populate('category');
+      return await User.findById(context.user._id).populate('recipes')
     },
     recipe: async (parent, { _id }) => {
       return await Recipe.findById(_id).populate('category');
@@ -64,19 +64,20 @@ const resolvers = {
     addRecipe: async (parent, { name, ingredients, instructions, image, category, like }, context) => {
       console.log(context, name);
       if (context.user) {
-
-        const recipe = await Recipe.create({
-          name, ingredients, instructions, image, category, like
+       console.log("Hello", name);
+        let recipe = await Recipe.create({
+          name: name, ingredients: ingredients, instructions: instructions, image: image, category: category, like: like
         })
 
-        await Recipe.findByIdAndUpdate(
+       const user = await User.findByIdAndUpdate(
           { _id: context.user._id }, 
           { $push: { recipes: recipe._id } },
           { new: true }
           );
 
-        console.log(recipe)
-        return recipe;
+      //   console.log(recipe)
+        return  user;
+       
         // return {...recipe._doc};
         // return {...thing._doc};
       }
@@ -90,10 +91,10 @@ const resolvers = {
       return await Recipe.findByIdAndUpdate(_id, { new: true });
     },
 
-    addLike: async (parent, { likeId, reactionBody}, context) => {
+    addLike: async (parent, { recipeId, likeBody}, context) => {
       if (context.user) {
         const updatedRecipe = await Recipe.findOneAndUpdate(
-          { _id: likeId },
+          { _id: recipeId },
           {$push: { likes: {likeBody, username: context.user.firstName }}},
           { new: true, runValidators: true }
         );

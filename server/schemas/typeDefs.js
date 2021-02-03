@@ -32,7 +32,7 @@ const typeDefs = gql`
   type Query {
     categories: [Category]
     user: User
-    recipes(category:ID, name: String): [Recipe] 
+    recipes(category:ID, name: String): User
     recipe(_id: ID!): Recipe
   }
 
@@ -41,8 +41,8 @@ const typeDefs = gql`
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     updateRecipe(_id: ID!, like: Int!): Recipe
-    addRecipe(name: String!, ingredients: String!, instructions: String!, image: String!, category: ID!, like: Int!): Recipe
-    addLike(likeId: ID!, likeBody: String!): Recipe
+    addRecipe(name: String!, ingredients: String!, instructions: String!, image: String!, category: ID!, like: Int!): User
+    addLike(recipeId: ID!, likeBody: String!): Recipe
   }
 `;
 
