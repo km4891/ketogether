@@ -28,10 +28,12 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+    
       <Router>
+      <Nav />
         <div>
           <Provider store={store}>
-            <Nav />
+            
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />

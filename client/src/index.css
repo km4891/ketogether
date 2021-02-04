@@ -87,14 +87,14 @@ p {
 
 /* Header Styling */
 header {
-    display: flex;
-    flex-wrap: wrap;
+    
     align-items: center;
     background: var(--secondary);
-    width: 100%;
-    position: relative;
+    width: 100%; 
+    margin-top: 2%;
+    height: 30vh;
 }
-
+ 
 .title {
     padding: 0 0 10px 21%;
     color: var(--primary);
@@ -103,6 +103,9 @@ header {
 .keto {
     text-shadow: -3px -2px 2px var(--tertiary);
     font-size: 8.5vw;
+    position: relative;
+    margin-top: 50%;
+
 }
 
 a:visited,
@@ -111,9 +114,9 @@ a:link {
 }
 
 .header-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+   
+    position: absolute;
+    z-index: 2
 }
 /* Header Styling End */
 
@@ -287,5 +290,5 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
-    
+
 }

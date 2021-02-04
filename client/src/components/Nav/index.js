@@ -13,7 +13,7 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/savedRecipes">
+            <Link to="/recipeForm">
               Saved Recipes 
             </Link>
           </li>
