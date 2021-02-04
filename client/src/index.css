@@ -8,6 +8,7 @@ main {
     --primary: #C3E6E0;
     --secondary: #01C6B2;
     --tertiary: #96D701;
+    --border: #007266;
     --light: #fafafa;
     --dark: #000000;
     --darker: #111111;
@@ -65,8 +66,229 @@ p {
     margin-top: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 96%;
+    align-items: left;
+    list-style-type: none;
+}
+
+.child-1 {
+    left: -541%;
+}
+
+.child-2 {
+    left: -170%;
+}
+
+/* Header Styling */
+header {
+    
+    align-items: center;
+    background: var(--secondary);
+    width: 100%; 
+    margin-top: 2%;
+    height: 30vh;
+}
+ 
+.title {
+    padding: 0 0 10px 21%;
+    color: var(--primary);
+}
+
+.keto {
+    text-shadow: -3px -2px 2px var(--tertiary);
+    font-size: 8.5vw;
+    position: relative;
+    margin-top: 50%;
+
+}
+
+a:visited,
+a:link {
+    color: var(--primary);
+}
+
+.header-links {
+   
+    position: absolute;
+    z-index: 2
+}
+/* Header Styling End */
+
+
+/* Footer Styling */
+footer {
+    height: 10vh;
+    background: var(--secondary);
+    padding-left: 40vw;
+    font-size: 3vw;
+}
+/* Footer Styling End */
+
+
+/* Button Styling */
+.btn-no-style {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+}
+
+.btn-no-style:focus {
+    outline: none;
+}
+
+.nav-btn {
+    margin: 6px;
+    margin-right: 3vh;
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: var(--primary);
+    transition: .5s;
+    text-decoration: none;
+}
+
+.nav-btn:active {
+    background-color: var(--tertiary);
+    transition: .3s;
+}
+
+.signup-btn,
+.login-btn {
+    border: 0;
+    padding: 2%;
+    font-weight: bold;
+    font-size: 6vw;
+    transition: color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+    transition: .3s;
+    border: 3px solid var(--border);
+    border-radius: 15px;
+}
+
+.create-recipe-btn {
+    font-size: 4vw;
+    width: 49%;
+    margin: auto auto 15px auto;
+}
+
+.submit-btn {
+    width: fit-content;
+    height: 30px;
+}
+/* Button Styling End */
+
+
+/* Login & Signup Styling */
+.ls-title {
+
+}
+
+.login-signup {
+    background-color: var(--secondary);
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid var(--dark);
+    color: var(--dark);
+    font-size: 4.5vw;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.login-signup:focus {
+    outline: none;
+    border: 1px solid var(--tertiary);
+}
+
+.ls-title{
+    text-align: center;
+}
+/* Login & Signup Styling End */
+
+
+/* Dashboard Styling */
+.container {
+    margin-top: 60px;
+}
+
+.category {
+    font-size: 7vw;
+    text-align: center;
+    color: var(--border);
+}
+
+.recipes {
+    text-align: center;
+    display: inline-block;
+    margin-left: 10%;
+    height: 400px;
+    color: var(--border);
+    background-color: var(--primary);
+    border: 5px inset var(--secondary);
+    border-radius: 15px;
+    width: 80%;
+}
+/* Dashboard Styling End */
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 445px) {
+    .title {
+        padding: 0 0 10px 24%;
     }
-  }
+
+    .child-1 {
+        left: -578%;
+    } 
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .title {
+        padding: 0 0 10px 24%;
+    }
+
+    .child-1 {
+        left: -989%;
+    } 
+
+    .child-2 {
+        left: -250%;
+    }
+
+    .signup-btn,
+    .login-btn {
+        font-size: 3.7vw;
+        padding: 35%;
+    }
+
+    .category {
+        font-size: 6vw;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}

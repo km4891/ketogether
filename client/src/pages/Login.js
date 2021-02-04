@@ -33,9 +33,9 @@ function Login(props) {
         ← Go to Signup
       </Link>
 
-      <h2>Login</h2>
+      <h2 className="ls-title">Login</h2>
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 login-signup">
           <label htmlFor="email">Email address:</label>
           <input
             placeholder="youremail@test.com"
@@ -45,7 +45,7 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-2 login-signup">
           <label htmlFor="pwd">Password:</label>
           <input
             placeholder="******"
@@ -61,9 +61,11 @@ function Login(props) {
           </div> : null
         }
         <div className="flex-row flex-end">
-          <button type="submit">
-            Submit
-          </button>
+          <center>
+            <button type="submit" className="signup-btn">
+              Submit
+            </button>
+          </center>
         </div>
       </form>
     </div>
