@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
-import RecipeList from "./components/RecipeList";
+import RecipeList from "./components/UserDashboard";
 import { Provider } from 'react-redux';
 import store from './utils/store';
 import RecipeForm from './pages/RecipeForm';
