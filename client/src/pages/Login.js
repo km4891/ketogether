@@ -61,9 +61,11 @@ function Login(props) {
           </div> : null
         }
         <div className="flex-row flex-end">
-          <button type="submit" className="signup-btn">
-            Submit
-          </button>
+          <center>
+            <button type="submit" className="signup-btn">
+              Submit
+            </button>
+          </center>
         </div>
       </form>
     </div>

@@ -8,6 +8,7 @@ main {
     --primary: #C3E6E0;
     --secondary: #01C6B2;
     --tertiary: #96D701;
+    --border: #007266;
     --light: #fafafa;
     --dark: #000000;
     --darker: #111111;
@@ -65,16 +66,53 @@ p {
     margin-top: 0;
 }
 
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 96%;
+    align-items: left;
+    list-style-type: none;
+}
+
+.child-1 {
+    left: -541%;
+}
+
+.child-2 {
+    left: -170%;
+}
+
 /* Header Styling */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     background: var(--secondary);
+    width: 100%;
+    position: relative;
 }
 
 .title {
+    padding: 0 0 10px 20%;
+    color: var(--primary);
+}
 
+.keto {
+    text-shadow: -3px -2px 2px var(--tertiary);
+}
+
+a:visited,
+a:link {
+    color: var(--primary);
+}
+
+.header-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 /* Header Styling End */
 
@@ -125,30 +163,22 @@ footer {
 
 .signup-btn,
 .login-btn {
-    background-color: var(--tertiary);
+    background-color: var(--secondary);
     border: 0;
-    padding: 1%;
-    color: var(--dark);
+    padding: 2%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 6vw;
     transition: color .1s;
     cursor: pointer;
     border-radius: 5px;
-    margin: 0 0 40px 100px;
-}
-
-.login-btn {
-    font-size: 25px;
-    padding: 3%;
     width: auto;
-    margin: 0 0 30px 36%;
 }
 
 .signup-btn:hover,
 .login-btn:hover {
-    background-color: var(--dark);
-    color: var(--tertiary);
     transition: .3s;
+    border: 3px solid var(--border);
+    border-radius: 15px;
 }
 
 .create-recipe-btn {
@@ -175,27 +205,52 @@ footer {
     border-radius: 5px;
     border: 1px solid var(--dark);
     color: var(--dark);
-    font-size: 4vw;
-    width: 300px;
+    font-size: 4.5vw;
     margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .login-signup:focus {
     outline: none;
     border: 1px solid var(--tertiary);
 }
+
+.ls-title{
+    text-align: center;
+}
 /* Login & Signup Styling End */
 
 
 /* Dashboard Styling */
+.container {
+    margin-top: 60px;
+}
+
+.category {
+    font-size: 7vw;
+    text-align: center;
+    color: var(--border);
+}
+
 .recipes {
+    text-align: center;
     display: inline-block;
-    margin-left: 90px;
+    margin-left: 10%;
     height: 400px;
-    color: var(--dark);
+    color: var(--border);
     background-color: var(--primary);
     border: 5px inset var(--secondary);
     border-radius: 15px;
-    width: 45vw;
+    width: 80%;
 }
 /* Dashboard Styling End */
+
+
+/* Media Queries */
+
+/* small devices */
+@media only screen and (max-width: 600px) {
+
+
+}
