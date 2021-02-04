@@ -96,12 +96,13 @@ header {
 }
 
 .title {
-    padding: 0 0 10px 20%;
+    padding: 0 0 10px 21%;
     color: var(--primary);
 }
 
 .keto {
     text-shadow: -3px -2px 2px var(--tertiary);
+    font-size: 8.5vw;
 }
 
 a:visited,
@@ -163,7 +164,6 @@ footer {
 
 .signup-btn,
 .login-btn {
-    background-color: var(--secondary);
     border: 0;
     padding: 2%;
     font-weight: bold;
@@ -249,8 +249,43 @@ footer {
 
 /* Media Queries */
 
-/* small devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 445px) {
+    .title {
+        padding: 0 0 10px 24%;
+    }
+
+    .child-1 {
+        left: -578%;
+    } 
+
+}
 
 
+@media only screen and (max-width: 768px) {
+    .title {
+        padding: 0 0 10px 24%;
+    }
+
+    .child-1 {
+        left: -989%;
+    } 
+
+    .child-2 {
+        left: -250%;
+    }
+
+    .signup-btn,
+    .login-btn {
+        font-size: 3.7vw;
+        padding: 35%;
+    }
+
+    .category {
+        font-size: 6vw;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    
 }

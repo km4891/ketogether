@@ -4,6 +4,7 @@ import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions'
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import { useSelector, useDispatch } from "react-redux";
+import { Form } from 'semantic-ui-react'
 
 function CategoryMenu() {
 
@@ -41,19 +42,19 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2 className="category">Choose a Category:</h2>
-      {categories.map(recipe => (
-        <button
-          key={recipe._id}
-          onClick={() => {
-            handleClick(recipe._id);
-          }}
-        >
-          {recipe.name}
-        </button>
+    <Form>
+    <Form.Group widths='equal'>
+     
+      <Form.Field label='An HTML <select>' control='select'>
+      {categories.map(category => (
+        <option value={category._id}>{category.name} </option>
+        
       ))}
-    </div>
+        
+      </Form.Field>
+    </Form.Group>
+    </Form>
+   
   );
 }
 
