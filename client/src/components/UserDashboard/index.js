@@ -7,6 +7,7 @@ import spinner from "../../assets/spinner.gif"
 import { useSelector, useDispatch } from "react-redux";
 import Recipe from "../Recipe";
 import { Container } from 'semantic-ui-react';
+import Recipe from "../AddRecipe"
 
 function RecipeList() {
 
