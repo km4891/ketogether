@@ -10,6 +10,7 @@ import Nav from "./components/Nav";
 import RecipeList from "./components/UserDashboard";
 import { Provider } from 'react-redux';
 import store from './utils/store';
+import AddRecipe from "./components/AddRecipe";
 
 
 const client = new ApolloClient({
@@ -35,7 +36,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-              <Route exact path="/dashboard/:id" component={RecipeList} />
+              <Route exact path="/dashboard/:id" component={AddRecipe} />
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </Provider>
