@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Alert from "../Alert";
 import Axios from "axios";
+import { Header, Container } from 'semantic-ui-react'
 
 function AddRecipe() {
   const [query, setQuery] = useState("");
@@ -41,8 +42,9 @@ function AddRecipe() {
   };
 
   return (
-    <div className="App">
-      <h1>Food Searching App</h1>
+    <Container textAlign="center" className="ing-search">
+    <div className="App ui container text">
+      <Header as="h1">Search For An Ingredient</Header>
       <form onSubmit={onSubmit} className="search-form">
         {alert !== "" && <Alert alert={alert} />}
         <input
@@ -60,6 +62,7 @@ function AddRecipe() {
           ingredients.map(ingredients => <Recipe key={uuidv4()} recipe={recipe} />)} */}
       </div>
     </div>
+    </Container>
   );
 }
 
