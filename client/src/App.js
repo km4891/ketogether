@@ -10,8 +10,8 @@ import Nav from "./components/Nav";
 import RecipeList from "./components/UserDashboard";
 import { Provider } from 'react-redux';
 import store from './utils/store';
-import AddRecipe from "./components/AddRecipe";
-
+import RecipeForm from './pages/RecipeForm';
+import 'semantic-ui-css/semantic.min.css'
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -28,15 +28,18 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+    
       <Router>
+      <Nav />
         <div>
           <Provider store={store}>
-            <Nav />
+            
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-              <Route exact path="/userdashboard" component={AddRecipe} />
+              <Route exact path="/dashboard/:id" component={RecipeList} />
+              <Route exact path="/recipeform" component={RecipeForm} />
               {/* <Route component={NoMatch} /> */}
             </Switch>
           </Provider>
