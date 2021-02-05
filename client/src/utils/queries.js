@@ -1,35 +1,24 @@
 import gql from 'graphql-tag';
 
 export const QUERY_RECIPES = gql`
-  query getRecipe($category: ID) {
-    recipes(category: $category) {
+query {
+  recipes {
+    _id
+    firstName
+    lastName
+    email
+    recipes {
       _id
       name
       ingredients
       instructions
       image
-      category {
-        _id
-      }
+      category
       like
     }
   }
+}
 `;
-
-// export const QUERY_ALL_RECIPES = gql`
-//   {
-//     recipes(category: $category) {
-//       _id
-//       name
-//       ingredients
-//       instructions
-//       image
-//       category {
-//         _id
-//       }
-//       like
-//     }
-// `;
 
 export const QUERY_CATEGORIES = gql`
 {
