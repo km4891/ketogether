@@ -36,7 +36,7 @@ function Dashboard() {
                         <p>{name}</p>
                       </Link>
                       <div>
-                        <span>${like}</span>
+                        {/* <span>${like}</span> */}
                       </div>
                     </div>
                   ))}
