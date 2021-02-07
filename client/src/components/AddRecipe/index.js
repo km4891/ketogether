@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import Alert from "../Alert";
 import Axios from "axios";
+import { Header, Container } from 'semantic-ui-react'
 
 function AddRecipe() {
   const [query, setQuery] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [alert, setAlert] = useState("");
 
+  const APP_ID = "639c2022";
+  const APP_KEY = "bcaa740bee4e141684fd0ec018cb0d2a";
 
-  const APP_KEY = "fd2627a2d8df43a0ab8c34b0e9e9fa33";
-
-  const url = `https://api.spoonacular.com/food/ingredients/search?query=${query}&apiKey=${APP_KEY}`;
+  const url = `https://api.edamam.com/api/nutrition-details?&app_id=${APP_ID}&app_key=${APP_KEY}&ingr=${query}`;
 
   const getData = async () => {
     console.log('line 16');
     console.log("this is 17", query );
-    // if (query) {
-        const result = await Axios.get(url);
-      // if (!result.data.more) {
-        // return setAlert("No food with such name");
-      // } 
+    //  if (query) {
+         const result = await Axios.get(url);
+    //   if (!result.data.more) {
+    //     return setAlert("No food with such name");
+    //   } 
       console.log("inside of get data");
       console.log(result);
       setIngredients(result.data.hits);
       setQuery("");
       setAlert("");
-    // } else {
-    //   setAlert("Please fill the form");
-    //  }
-  };
+  //   } else {
+  //     setAlert("Please fill the form");
+  //    }
+   };
 
   const onChange = e => { setQuery(e.target.value)
    console.log(e.target.value)
@@ -41,8 +42,9 @@ function AddRecipe() {
   };
 
   return (
-    <div className="App">
-      <h1>Food Searching App</h1>
+    <Container textAlign="center" className="ing-search">
+    <div className="App ui container text">
+      <Header as="h1">Search For An Ingredient</Header>
       <form onSubmit={onSubmit} className="search-form">
         {alert !== "" && <Alert alert={alert} />}
         <input
@@ -60,6 +62,7 @@ function AddRecipe() {
           ingredients.map(ingredients => <Recipe key={uuidv4()} recipe={recipe} />)} */}
       </div>
     </div>
+    </Container>
   );
 }
 

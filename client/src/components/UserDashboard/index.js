@@ -5,8 +5,9 @@ import { QUERY_RECIPES } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
 import { useSelector, useDispatch } from "react-redux";
-import Recipe from "../Recipe"
-
+import Recipe from "../Recipe";
+import { Container } from 'semantic-ui-react';
+import Recipe from "../AddRecipe"
 
 function RecipeList() {
 
@@ -46,7 +47,8 @@ function RecipeList() {
 
   return (
     <div className="my-2">
-      <h2>Recipes</h2>
+      <h2 className="recipes">Recipes..</h2>
+      {console.log(state.recipes)}
       {state.recipes.length ? (
         <div className="flex-row">
             {filterRecipes().map(recipe => (
@@ -63,7 +65,9 @@ function RecipeList() {
             ))}
         </div>
       ) : (
+        <Container textAlign='center'>
         <h3>You haven't added any recipes yet!</h3>
+        </Container>
       )}
       { loading ? 
       <img src={spinner} alt="loading" />: null}

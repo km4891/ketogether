@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER } from "../utils/queries";
@@ -26,7 +26,7 @@ function Dashboard() {
               <div key={recipe._id} className="my-2">
                 {/* <h3>{new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3> */}
                 <div className="flex-row">
-                  {order.recipes.map(({ _id, image, name,  }, index) => (
+                  {recipe.map(({ _id, image, name,  }, index) => (
                     <div key={index} className="card px-1 py-1">
                       <Link to={`/recipes/${_id}`}>
                         <img
@@ -36,7 +36,7 @@ function Dashboard() {
                         <p>{name}</p>
                       </Link>
                       <div>
-                        <span>${like}</span>
+                        {/* <span>${like}</span> */}
                       </div>
                     </div>
                   ))}
