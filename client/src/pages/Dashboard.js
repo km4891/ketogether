@@ -26,7 +26,7 @@ function Dashboard() {
               <div key={recipe._id} className="my-2">
                 {/* <h3>{new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3> */}
                 <div className="flex-row">
-                  {recipes.map(({ _id, image, name,  }, index) => (
+                  {recipe.map(({ _id, image, name,  }, index) => (
                     <div key={index} className="card px-1 py-1">
                       <Link to={`/recipes/${_id}`}>
                         <img
