@@ -45,7 +45,7 @@ function CategoryMenu() {
     <Form>
     <Form.Group widths='equal'>
      
-      <Form.Field label='An HTML <select>' control='select'>
+      <Form.Field label='Choose a meal' control='select' className="ui container text">
       {categories.map(category => (
         <option value={category._id}>{category.name} </option>
         

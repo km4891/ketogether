@@ -71,32 +71,29 @@ p {
 }
 
 .child {
-    position: absolute;
-    top: 96%;
-    align-items: left;
+    top: 91%;
     list-style-type: none;
 }
 
 .child-1 {
-    left: -541%;
+    left: 796%;
 }
 
 .child-2 {
-    left: -170%;
+    left: 2338%;
 }
+
 
 /* Header Styling */
 header {
-    
     align-items: center;
     background: var(--secondary);
     width: 100%; 
-    margin-top: 2%;
-    height: 30vh;
+    padding-top: 1.5%;
+    height: 46vh;
 }
  
 .title {
-    padding: 0 0 10px 21%;
     color: var(--primary);
 }
 
@@ -114,9 +111,8 @@ a:link {
 }
 
 .header-links {
-   
-    position: absolute;
-    z-index: 2
+    z-index: 2;
+    padding-top: 1%;
 }
 /* Header Styling End */
 
@@ -165,23 +161,19 @@ footer {
     transition: .3s;
 }
 
-.signup-btn,
-.login-btn {
+.dash-btn {
     border: 0;
     padding: 2%;
     font-weight: bold;
-    font-size: 6vw;
+    font-size: 3vw;
     transition: color .1s;
     cursor: pointer;
     border-radius: 5px;
     width: auto;
 }
 
-.signup-btn:hover,
-.login-btn:hover {
+.dash-btn:hover {
     transition: .3s;
-    border: 3px solid var(--border);
-    border-radius: 15px;
 }
 
 .create-recipe-btn {
@@ -208,10 +200,10 @@ footer {
     border-radius: 5px;
     border: 1px solid var(--dark);
     color: var(--dark);
-    font-size: 4.5vw;
+    font-size: 1.5vw;
     margin-bottom: 15px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .login-signup:focus {
@@ -221,6 +213,11 @@ footer {
 
 .ls-title{
     text-align: center;
+}
+
+.goback:visited,
+.goback:link {
+    color: var(--dark);
 }
 /* Login & Signup Styling End */
 
@@ -236,6 +233,10 @@ footer {
     color: var(--border);
 }
 
+.category-menu {
+    margin-right: 20%;
+}
+
 .recipes {
     text-align: center;
     display: inline-block;
@@ -247,27 +248,40 @@ footer {
     border-radius: 15px;
     width: 80%;
 }
+
+.ing-search {
+    margin-bottom: 9%;
+}
 /* Dashboard Styling End */
 
 
 /* Media Queries */
 
 @media only screen and (max-width: 445px) {
-    .title {
-        padding: 0 0 10px 24%;
-    }
 
     .child-1 {
         left: -578%;
     } 
 
+    .header-links {
+        padding: 1%;
+    }
+
+    .nav-btn {
+        font-size: 5.6vw;
+    }
+
+    .container {
+        margin-right: 10%;
+    }
+
+    .login-signup {
+        font-size: 4vw;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
-    .title {
-        padding: 0 0 10px 24%;
-    }
 
     .child-1 {
         left: -989%;
@@ -277,8 +291,7 @@ footer {
         left: -250%;
     }
 
-    .signup-btn,
-    .login-btn {
+    .dash-btn {
         font-size: 3.7vw;
         padding: 35%;
     }
@@ -287,8 +300,21 @@ footer {
         font-size: 6vw;
     }
 
+    header {
+        height: 23vh;
+    }
+
 }
 
 @media only screen and (max-width: 1024px) {
+
+    header {
+        height: 23vh;
+    }
+
+    .login-signup {
+        margin-left: 18%;
+        margin-right: 18%;
+    }
 
 }
