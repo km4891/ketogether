@@ -1,4 +1,4 @@
-# KEtogether
+# KETOgether
 
 ## Description 
 
