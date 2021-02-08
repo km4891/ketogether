@@ -5,7 +5,7 @@ import { QUERY_RECIPES } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
 import { useSelector, useDispatch } from "react-redux";
-// import Recipe from "../Recipe";
+
 import { Container } from 'semantic-ui-react';
 import RecipeItem from "../RecipeItem";
 // import Recipe from "../AddRecipe"
