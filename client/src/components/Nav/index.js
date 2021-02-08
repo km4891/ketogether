@@ -55,7 +55,7 @@ function Nav() {
         </h1>
       </Container>
 
-      <nav class="parent">
+      <nav className="parent">
         {showNavigation()}
       </nav>
     </header>
