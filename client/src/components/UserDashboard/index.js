@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from "react-redux";
 import RecipeForm from "../../pages/RecipeForm";
 import { Container } from 'semantic-ui-react';
 
-
 function RecipeList() {
 
   const state = useSelector(state => state)

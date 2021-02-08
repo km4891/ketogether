@@ -23,7 +23,7 @@ This forum like app is for the Keto community who are interested in sharing thie
 
 ## Deployed Link
 
-[KEtogether]()
+[KEtogether](https://ketogether.herokuapp.com/)
 
 ## Collaborators 
 
