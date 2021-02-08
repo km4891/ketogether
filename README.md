@@ -2,7 +2,9 @@
 
 ## Description 
 
-This forum like app is for the Keto community who are interested in sharing thier recipes to other users.  
+This forum like app is for the Keto community who are interested in sharing thier recipes to other users. 
+
+![alttext](https://github.com/yalitzab/ketogether/blob/main/client/public/images/appscreenshot.PNG)
 
 ## Technologies Used
 
@@ -18,8 +20,7 @@ This forum like app is for the Keto community who are interested in sharing thie
 
 ## Usage
 
-(add image)
-![alttext]()
+![alttext](https://github.com/yalitzab/ketogether/blob/main/client/public/images/screenshot2.PNG)
 
 ## Deployed Link
 
