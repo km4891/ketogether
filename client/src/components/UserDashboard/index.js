@@ -5,9 +5,9 @@ import { QUERY_RECIPES } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
 import { useSelector, useDispatch } from "react-redux";
-import Recipe from "../Recipe";
+import RecipeForm from "../../pages/RecipeForm";
 import { Container } from 'semantic-ui-react';
-import Recipe from "../AddRecipe"
+
 
 function RecipeList() {
 
@@ -52,7 +52,7 @@ function RecipeList() {
       {state.recipes.length ? (
         <div className="flex-row">
             {filterRecipes().map(recipe => (
-                <Recipe
+                <RecipeForm
                   key= {recipe._id}
                   _id={recipe._id}
                   category={recipe.category}
